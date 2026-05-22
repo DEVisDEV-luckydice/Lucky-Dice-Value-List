@@ -1,17 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: #1e1e1e;
+
+  background: #111;
+
   color: white;
-  font-family: sans-serif;
-  padding: 20px;
+
+  font-family: Arial;
 }
 
-h1 {
-  text-align: center;
+/* 상단 바 */
+
+.topbar {
+
+  width: 100%;
+
+  height: 80px;
+
+  background: #1b1b1b;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 25px;
+
+  border-bottom:
+  2px solid rgba(255,255,255,0.05);
 }
 
-.item {
-  background: #2d2d2d;
+.logo {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  margin-right: 20px;
+}
+
+.topbar button {
+
+  background: #2b2b2b;
+
+  border: none;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-size: 15px;
+}
+
+.topbar button:hover {
+
+  background: #5c6cff;
+
+  transform: translateY(-2px);
+}
+
+/* 메인 */
+
+.content {
+
+  padding: 30px;
+}
+
+.page h2 {
+
+  margin-bottom: 25px;
+
+  font-size: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 가치표 */
+
+#itemContainer {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(6, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+
+  background: #222;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: 0.2s;
+}
+
+.card:hover {
+
+  transform: scale(1.03);
+}
+
+.card img {
+
+  width: 100%;
+
+  height: 140px;
+
+  object-fit: cover;
+}
+
+.cardContent {
+
   padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 15px;
+}
+
+.itemName {
+
+  font-size: 20px;
+
+  margin-bottom: 10px;
+}
+
+.value {
+
+  color: gold;
+
+  margin-bottom: 8px;
+}
+
+#searchBar {
+
+  width: 300px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #2b2b2b;
+
+  color: white;
 }

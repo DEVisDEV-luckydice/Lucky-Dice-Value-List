@@ -2,19 +2,100 @@
 <html lang="ko">
 
 <head>
+
   <meta charset="UTF-8">
-  <title>My Value List</title>
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Lucky Dice Value List</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-  <h1>🎲 My Game Value List</h1>
+  <!-- 상단 바 -->
 
-  <div id="itemContainer"></div>
+  <div class="topbar">
+
+    <div class="logo">
+      🎲 Lucky Dice
+    </div>
+
+    <button onclick="showPage('valuePage')">
+      Value List
+    </button>
+
+    <button onclick="showPage('searchPage')">
+      Search
+    </button>
+
+    <button onclick="showPage('feedbackPage')">
+      Feedback
+    </button>
+
+    <button onclick="showPage('updatePage')">
+      Updates
+    </button>
+
+  </div>
+
+  <!-- 메인 -->
+
+  <div class="content">
+
+    <!-- 가치표 -->
+
+    <div id="valuePage" class="page">
+
+      <h2>📈 Value List</h2>
+
+      <div id="itemContainer"></div>
+
+    </div>
+
+    <!-- 검색 -->
+
+    <div id="searchPage"
+    class="page hidden">
+
+      <h2>🔍 Search</h2>
+
+      <input
+      type="text"
+      id="searchBar"
+      placeholder="Search items...">
+
+    </div>
+
+    <!-- 피드백 -->
+
+    <div id="feedbackPage"
+    class="page hidden">
+
+      <h2>💬 Feedback</h2>
+
+      <p>Discord: yourserver</p>
+
+    </div>
+
+    <!-- 업데이트 -->
+
+    <div id="updatePage"
+    class="page hidden">
+
+      <h2>📰 Updates</h2>
+
+      <p>Added new items!</p>
+
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
