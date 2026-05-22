@@ -1,160 +1,492 @@
+/* style.css */
+
 * {
+
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
 body {
 
-  background: #111;
+  background:
+  radial-gradient(
+    circle at top,
+    #2d2d2d,
+    #111
+  );
+
+  font-family: 'Oxanium', sans-serif;
 
   color: white;
 
-  font-family: Arial;
-}
-
-/* 상단 바 */
-
-.topbar {
-
-  width: 100%;
-
-  height: 80px;
-
-  background: #1b1b1b;
+  min-height: 100vh;
 
   display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 25px;
+}
+
+/* FLOATING FRAMES */
+
+.floatingFrame {
+
+  width: 74%;
+
+  background:
+  rgba(28,28,28,0.95);
+
+  border-radius: 26px;
+
+  margin-bottom: 22px;
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  box-shadow:
+  0 0 30px rgba(0,0,0,0.45);
+}
+
+/* NAVIGATION */
+
+.navFrame {
+
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
 
   align-items: center;
 
   gap: 15px;
-
-  padding: 0 25px;
-
-  border-bottom:
-  2px solid rgba(255,255,255,0.05);
 }
 
-.logo {
+.navTitle {
 
-  font-size: 28px;
+  color: #d18cff;
+
+  font-size: 14px;
 
   font-weight: bold;
-
-  margin-right: 20px;
 }
 
-.topbar button {
+.navButtons {
 
-  background: #2b2b2b;
+  display: flex;
+
+  gap: 12px;
+}
+
+.navButtons button {
+
+  background: #232323;
 
   border: none;
 
   color: white;
 
-  padding: 12px 20px;
+  padding: 12px 18px;
 
-  border-radius: 12px;
+  border-radius: 14px;
 
   cursor: pointer;
 
   transition: 0.2s;
 
-  font-size: 15px;
+  font-weight: bold;
 }
 
-.topbar button:hover {
+.navButtons button:hover {
 
-  background: #5c6cff;
+  background: #4f7dff;
 
   transform: translateY(-2px);
 }
 
-/* 메인 */
+.activeNav {
 
-.content {
+  background: #5b95ff !important;
 
-  padding: 30px;
+  box-shadow:
+  0 0 15px rgba(91,149,255,0.5);
 }
 
-.page h2 {
+/* SWITCH */
 
-  margin-bottom: 25px;
+.switchFrame {
 
-  font-size: 40px;
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
 }
 
-.hidden {
-  display: none;
+.switchTitle {
+
+  color: #d18cff;
+
+  font-size: 14px;
+
+  font-weight: bold;
 }
 
-/* 가치표 */
+.switchButtons {
+
+  display: flex;
+
+  gap: 12px;
+}
+
+.switchButtons button {
+
+  background: #232323;
+
+  border: none;
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-weight: bold;
+}
+
+.switchButtons button:hover {
+
+  background: #4f7dff;
+
+  transform: translateY(-2px);
+}
+
+.activeSwitch {
+
+  background: #5b95ff !important;
+
+  box-shadow:
+  0 0 15px rgba(91,149,255,0.5);
+}
+
+/* MAIN */
+
+.mainFrame {
+
+  padding: 25px;
+
+  min-height: 700px;
+}
+
+/* HEADER */
+
+.valueHeader {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.valueHeader h1 {
+
+  color: #5ba6ff;
+}
+
+#searchBar {
+
+  width: 340px;
+
+  background: #202020;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  padding: 12px;
+
+  border-radius: 14px;
+
+  outline: none;
+}
+
+/* GRID */
 
 #itemContainer {
 
   display: grid;
 
   grid-template-columns:
-  repeat(6, 1fr);
+  repeat(6, 185px);
 
-  gap: 20px;
+  justify-content: center;
+
+  gap: 18px;
 }
+
+/* CARD */
 
 .card {
 
-  background: #222;
+  background: #262626;
 
-  border-radius: 20px;
+  border-radius: 18px;
 
-  overflow: hidden;
+  padding: 12px;
+
+  border:
+  1px solid rgba(255,255,255,0.06);
 
   transition: 0.2s;
+
+  box-shadow:
+  0 0 20px rgba(0,0,0,0.4);
 }
 
 .card:hover {
 
-  transform: scale(1.03);
+  transform:
+  translateY(-5px);
+
+  box-shadow:
+  0 0 25px rgba(91,149,255,0.35);
 }
+
+/* IMAGE */
 
 .card img {
 
   width: 100%;
 
-  height: 140px;
+  height: 120px;
 
   object-fit: cover;
+
+  border-radius: 14px;
+
+  background: #333;
 }
 
-.cardContent {
-
-  padding: 15px;
-}
+/* TITLE */
 
 .itemName {
 
-  font-size: 20px;
+  text-align: center;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  margin-top: 12px;
 
   margin-bottom: 10px;
 }
 
-.value {
+/* RARITY BAR */
 
-  color: gold;
+.rarityBar {
 
-  margin-bottom: 8px;
+  width: 100%;
+
+  padding: 6px;
+
+  border-radius: 999px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
 }
 
-#searchBar {
+.secret {
 
-  width: 300px;
+  background:
+  linear-gradient(
+    180deg,
+    #260079,
+    #4900be
+  );
+}
 
-  padding: 12px;
+.exotic {
 
-  border: none;
+  background:
+  linear-gradient(
+    180deg,
+    #970097,
+    #ff00ea
+  );
+}
 
-  border-radius: 12px;
+.mythic {
 
-  background: #2b2b2b;
+  background:
+  linear-gradient(
+    180deg,
+    #ac0000,
+    #ff0000
+  );
+}
 
-  color: white;
+.legendary {
+
+  background:
+  linear-gradient(
+    180deg,
+    #ff9800,
+    #ffd54f
+  );
+}
+
+.epic {
+
+  background:
+  linear-gradient(
+    180deg,
+    #992dff,
+    #ae58ff
+  );
+}
+
+.rare {
+
+  background:
+  linear-gradient(
+    180deg,
+    #00b7ff,
+    #5ce1ff
+  );
+}
+
+.uncommon {
+
+  background:
+  linear-gradient(
+    180deg,
+    #1e9b29,
+    #5cff6a
+  );
+}
+
+.common {
+
+  background:
+  linear-gradient(
+    180deg,
+    #858585,
+    #d4d4d4
+  );
+}
+
+/* STATS */
+
+.stat {
+
+  background: #3a3a3a;
+
+  border-radius: 999px;
+
+  padding: 4px 8px;
+
+  margin-top: 6px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+/* DEMAND */
+
+.demand-low {
+
+  color: #e21717;
+}
+
+.demand-medium {
+
+  color: #ffd900;
+}
+
+.demand-high {
+
+  color: #c9ff66;
+}
+
+.demand-insane {
+
+  color: #1eff00;
+}
+
+/* STABILITY */
+
+.stable {
+
+  color: #66e0ff;
+}
+
+.rising {
+
+  color: #4fff58;
+}
+
+.dropping {
+
+  color: #ff6b6b;
+}
+
+/* CALCULATOR */
+
+.calculatorTitle {
+
+  text-align: center;
+
+  font-size: 32px;
+
+  margin-top: 40px;
+}
+
+.calculatorBox {
+
+  margin-top: 20px;
+
+  background: #232323;
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+/* HIDDEN */
+
+.hidden {
+
+  display: none;
 }

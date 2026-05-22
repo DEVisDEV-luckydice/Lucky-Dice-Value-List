@@ -1,96 +1,142 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
 
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-  content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Lucky Dice Value List</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="style.css"
+>
 
-  <link rel="icon" type="image/png" href="Lucky Dice_Logo_3_Dscd.png">
+  <link
+  rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
+
+  <link
+  href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap"
+  rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- 상단 바 -->
+  <!-- NAVIGATION -->
 
-  <div class="topbar">
+  <div class="floatingFrame navFrame">
 
-    <div class="logo">
+    <div class="navTitle">
       🎲 Lucky Dice
     </div>
 
-    <button onclick="showPage('valuePage')">
-      Value List
-    </button>
+    <div class="navButtons">
 
-    <button onclick="showPage('searchPage')">
-      Search
-    </button>
+      <button class="activeNav">
+        Home
+      </button>
 
-    <button onclick="showPage('feedbackPage')">
-      Feedback
-    </button>
+      <button>
+        Value List
+      </button>
 
-    <button onclick="showPage('updatePage')">
-      Updates
-    </button>
+      <button>
+        Feedback
+      </button>
+
+    </div>
 
   </div>
 
-  <!-- 메인 -->
+  <!-- SWITCH -->
 
-  <div class="content">
+  <div class="floatingFrame switchFrame">
 
-    <!-- 가치표 -->
+    <div class="switchTitle">
+      📚 Switch Pages
+    </div>
 
-    <div id="valuePage" class="page">
+    <div class="switchButtons">
 
-      <h2>📈 Value List</h2>
+      <button
+        class="activeSwitch"
+        onclick="showPage('valuePage')"
+      >
+
+        📋 Value List
+
+      </button>
+
+      <button
+        onclick="showPage('calculatorPage')"
+      >
+
+        🧮 Trade Calculator
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="floatingFrame mainFrame">
+
+    <!-- VALUE PAGE -->
+
+    <div id="valuePage">
+
+      <div class="valueHeader">
+
+        <h1>
+          📋 Value List
+        </h1>
+
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Search items..."
+        >
+
+      </div>
 
       <div id="itemContainer"></div>
 
     </div>
 
-    <!-- 검색 -->
+    <!-- CALCULATOR PAGE -->
 
-    <div id="searchPage"
-    class="page hidden">
+    <div
+      id="calculatorPage"
+      class="hidden"
+    >
 
-      <h2>🔍 Search</h2>
+      <div class="calculatorTitle">
 
-      <input
-      type="text"
-      id="searchBar"
-      placeholder="Search items...">
+        🧮 Trade Calculator
 
-    </div>
+      </div>
 
-    <!-- 피드백 -->
+      <div class="calculatorBox">
 
-    <div id="feedbackPage"
-    class="page hidden">
+        Coming Soon...
 
-      <h2>💬 Feedback</h2>
-
-      <p>Discord: yourserver</p>
-
-    </div>
-
-    <!-- 업데이트 -->
-
-    <div id="updatePage"
-    class="page hidden">
-
-      <h2>📰 Updates</h2>
-
-      <p>Added new items!</p>
+      </div>
 
     </div>
 
