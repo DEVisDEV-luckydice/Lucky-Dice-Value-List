@@ -37,12 +37,92 @@ const items = [
   },
 
   {
+      name: "Rainbow Dice",
+
+    value: 265,
+
+    demand: 9,
+
+    stability: "Dropping",
+
+    rarity: "Mythic",
+
+    image:
+    "https://images.unsplash.com/photo-1520034475321-cbe63696469a?q=80&w=1200&auto=format&fit=crop"
+
+  },
+
+  {
+      name: "Oppression Dice",
+
+    value: 200,
+
+    demand: 4,
+
+    stability: "Stable",
+
+    rarity: "Legendary",
+
+    image:
+    "https://images.unsplash.com/photo-1520034475321-cbe63696469a?q=80&w=1200&auto=format&fit=crop"
+
+  },
+
+  {
+      name: "Dice Piece",
+
+    value: 1,
+
+    demand: 6,
+
+    stability: "Stable",
+
+    rarity: "Epic",
+
+    image:
+    "https://images.unsplash.com/photo-1520034475321-cbe63696469a?q=80&w=1200&auto=format&fit=crop"
+
+  },
+
+    {
+      name: "Coin Potion",
+
+    value: 0.7,
+
+    demand: 9,
+
+    stability: "Stable",
+
+    rarity: "Rare",
+
+    image:
+    "https://images.unsplash.com/photo-1520034475321-cbe63696469a?q=80&w=1200&auto=format&fit=crop"
+
+  },
+
+    {
+      name: "Wood",
+
+    value: 0.5,
+
+    demand: 4,
+
+    stability: "Stable",
+
+    rarity: "Uncommon",
+
+    image:
+    "https://images.unsplash.com/photo-1520034475321-cbe63696469a?q=80&w=1200&auto=format&fit=crop"
+
+  },
+
+  {
 
     name: "이색",
 
-    value: 6974,
+    value: 0.1,
 
-    demand: 1,
+    demand: 0.01,
 
     stability: "Dropping",
 

@@ -49,7 +49,8 @@ body {
   1px solid rgba(255,255,255,0.06);
 
   box-shadow:
-  0 0 30px rgba(0,0,0,0.45);
+  0 0 30px rgba(0,0,0,0.45),
+  0 0 10px rgba(91,149,255,0.08);
 }
 
 /* NAVIGATION */
@@ -229,6 +230,15 @@ body {
   outline: none;
 }
 
+#searchBar:focus {
+
+  border:
+  1px solid #5b95ff;
+
+  box-shadow:
+  0 0 15px rgba(91,149,255,0.35);
+}
+
 /* GRID */
 
 #itemContainer {
@@ -265,10 +275,11 @@ body {
 .card:hover {
 
   transform:
-  translateY(-5px);
+  translateY(-6px)
+  scale(1.03);
 
   box-shadow:
-  0 0 25px rgba(91,149,255,0.35);
+  0 0 30px rgba(91,149,255,0.45);
 }
 
 /* IMAGE */
@@ -318,6 +329,10 @@ body {
   font-weight: bold;
 
   margin-bottom: 10px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 }
 
 .secret {
